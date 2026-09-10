@@ -7,7 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-_Nothing yet — add entries here as you merge PRs._
+### Added
+
+- `--only <kind>` flag for `authzprobe scan` to plan just `bola`, `bfla`, or
+  `baseline` test families.
 
 ## [0.1.0] — 2026-09-09
 

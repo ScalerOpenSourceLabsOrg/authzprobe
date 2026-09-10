@@ -3,6 +3,7 @@ import { writeFile } from 'node:fs/promises';
 import { Command } from 'commander';
 import pc from 'picocolors';
 import { scan } from './engine/run.js';
+import { parseOnlyFilter } from './engine/plan.js';
 import { printReport, toJson } from './report/report.js';
 import { summarize } from './engine/evaluate.js';
 
@@ -24,12 +25,14 @@ program
   .option('--dry-run', 'plan the requests but do not send them', false)
   .option('--include-unsafe', 'also probe mutating verbs (POST/PUT/PATCH/DELETE)', false)
   .option('--no-baseline', 'skip baseline self-access sanity checks')
+  .option('--only <kind>', 'plan only one test family: bola, bfla, or baseline')
   .option('--concurrency <n>', 'max concurrent requests', (v) => parseInt(v, 10), 5)
   .option('--timeout <ms>', 'per-request timeout in milliseconds', (v) => parseInt(v, 10), 10_000)
   .option('--json <file>', 'also write a machine-readable JSON report to this file')
   .option('--no-fail-on-finding', 'exit 0 even when findings are detected (report only)')
   .action(async (opts) => {
     try {
+      const only = parseOnlyFilter(opts.only);
       const report = await scan({
         specPath: opts.spec,
         configPath: opts.config,
@@ -37,6 +40,7 @@ program
         dryRun: opts.dryRun,
         includeUnsafe: opts.includeUnsafe,
         includeBaseline: opts.baseline, // commander maps --no-baseline -> baseline:false
+        only,
         concurrency: opts.concurrency,
         timeoutMs: opts.timeout,
       });

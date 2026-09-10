@@ -1,11 +1,35 @@
 import type { Config, Identity, PrivilegedRule } from '../config/schema.js';
-import type { SpecOperation, TestCase } from '../types.js';
+import type { SpecOperation, TestCase, TestKind } from '../types.js';
 
 export interface PlanOptions {
   /** Include mutating verbs (POST/PUT/PATCH/DELETE). Off by default for safety. */
   includeUnsafe: boolean;
   /** Emit baseline self-access checks that confirm auth actually works. */
   includeBaseline: boolean;
+  /** Restrict the plan to a single test family: BOLA, BFLA, or BASELINE. */
+  only?: TestKind;
+}
+
+/** `--only` accepts these lowercase values, each mapping to one test family. */
+const ONLY_FILTERS: Record<string, TestKind> = {
+  bola: 'BOLA',
+  bfla: 'BFLA',
+  baseline: 'BASELINE',
+};
+
+/**
+ * Parse the CLI `--only <kind>` value. Throws a clear error listing the
+ * allowed values when the input is not one of them.
+ */
+export function parseOnlyFilter(value: string | undefined): TestKind | undefined {
+  if (value === undefined) return undefined;
+  const kind = ONLY_FILTERS[value.toLowerCase()];
+  if (!kind) {
+    throw new Error(
+      `Invalid value for --only: "${value}". Allowed values: bola, bfla, baseline.`,
+    );
+  }
+  return kind;
 }
 
 const DEFAULT_PLAN_OPTIONS: PlanOptions = {
@@ -39,7 +63,7 @@ export function planTests(
     cases.push(...planBfla(op, config));
   }
 
-  return cases;
+  return opts.only ? cases.filter((c) => c.kind === opts.only) : cases;
 }
 
 function planBola(op: SpecOperation, config: Config, opts: PlanOptions): TestCase[] {

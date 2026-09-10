@@ -80,6 +80,7 @@ Key flags:
 | `--dry-run` | Plan the requests but send nothing |
 | `--include-unsafe` | Also probe mutating verbs (off by default) |
 | `--no-baseline` | Skip baseline self-access checks |
+| `--only <kind>` | Plan only one test family: `bola`, `bfla`, or `baseline` |
 | `--json <file>` | Write a machine-readable report |
 | `--no-fail-on-finding` | Report only; always exit 0 |
 | `--concurrency <n>` | Max concurrent requests (default 5) |
