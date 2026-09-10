@@ -35,9 +35,9 @@ to a new student core maintainer under the club:
   summary / HANDOVER access checklist.
 
 ### Follow-ups
-- Fill in placeholders (see checklist): `ScalerOpenSourceLabsOrg`, `<CLUB_NAME>`, `<CLUB_EMAIL>`,
-  `<NEW_MAINTAINER>` / `<NEW_MAINTAINER_NAME>`, `<PRESIDENT_HANDLE>` /
-  `<PRESIDENT_NAME>`, `<HANDOVER_DATE>`, `<MENTOR>`.
+- Fill in placeholders (see checklist): `ScalerOpenSourceLabsOrg`, `Scaler Open Source Labs`, `<CLUB_EMAIL>`,
+  `<NEW_MAINTAINER>` / `<NEW_MAINTAINER_NAME>`, `PRAteek-singHWY` /
+  `Prateek Singh`, `<HANDOVER_DATE>`, `<MENTOR>`.
 - After creating the org, transfer the repo in and enable Discussions + private
   vulnerability reporting.
 

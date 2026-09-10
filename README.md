@@ -148,7 +148,7 @@ See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the design.
 ## Community & contributing
 
 We welcome contributors of all experience levels — this is a
-**<CLUB_NAME>** community project.
+**Scaler Open Source Labs** community project.
 
 - 🤝 [Contributing guide](./CONTRIBUTING.md) — setup, workflow, PR process
 - 🟢 [Good first issues](./docs/GOOD_FIRST_ISSUES.md) — start here
@@ -159,4 +159,4 @@ We welcome contributors of all experience levels — this is a
 
 ## License
 
-[MIT](./LICENSE) © <CLUB_NAME> contributors.
+[MIT](./LICENSE) © Scaler Open Source Labs contributors.

@@ -19,7 +19,7 @@ This file lists the people who can review and merge changes to AuthzProbe. See
 
 | Account | Note |
 |---------|------|
-| `<CLUB_NAME>` official GitHub (`<CLUB_EMAIL>`) | Permanent owner; survives leadership changes |
+| `Scaler Open Source Labs` official GitHub (`<CLUB_EMAIL>`) | Permanent owner; survives leadership changes |
 
 ## Emeritus
 
@@ -27,7 +27,7 @@ Past maintainers who have stepped back. Thank you for your work! 🙏
 
 | Name | GitHub | Was |
 |------|--------|-----|
-| _<PRESIDENT_NAME>_ | [@<PRESIDENT_HANDLE>](https://github.com/<PRESIDENT_HANDLE>) | Founder / original author, handed over on <HANDOVER_DATE> |
+| _Prateek Singh_ | [@PRAteek-singHWY](https://github.com/PRAteek-singHWY) | Founder / original author, handed over on <HANDOVER_DATE> |
 
 ---
 

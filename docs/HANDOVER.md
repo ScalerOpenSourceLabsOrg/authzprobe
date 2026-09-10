@@ -2,10 +2,10 @@
 
 Welcome, **<NEW_MAINTAINER_NAME>** 👋 — this repo is now yours to lead. This
 document is the checklist and context to take over AuthzProbe as the new core
-maintainer under **<CLUB_NAME>**. Read it top to bottom once; it should take
+maintainer under **Scaler Open Source Labs**. Read it top to bottom once; it should take
 about 20 minutes.
 
-> Handed over by **<PRESIDENT_NAME>** ([@<PRESIDENT_HANDLE>](https://github.com/<PRESIDENT_HANDLE>)) on **<HANDOVER_DATE>**.
+> Handed over by **Prateek Singh** ([@PRAteek-singHWY](https://github.com/PRAteek-singHWY)) on **<HANDOVER_DATE>**.
 
 ## 1. What AuthzProbe is (the 2-minute version)
 
@@ -90,5 +90,5 @@ the club's official account remains a permanent Org Owner. Then update the
 ---
 
 Questions during the transition? Reach the outgoing maintainer at
-[@<PRESIDENT_HANDLE>](https://github.com/<PRESIDENT_HANDLE>) or the club at
+[@PRAteek-singHWY](https://github.com/PRAteek-singHWY) or the club at
 **<CLUB_EMAIL>**. Good luck — you've got this. 🚀

@@ -1,7 +1,7 @@
 # Contributing to AuthzProbe
 
 Thanks for your interest in contributing! AuthzProbe is a community project
-maintained by **<CLUB_NAME>**. This guide gets you from zero to a merged pull
+maintained by **Scaler Open Source Labs**. This guide gets you from zero to a merged pull
 request. It is intentionally short — read it once, then dive in.
 
 By participating you agree to abide by our [Code of Conduct](./CODE_OF_CONDUCT.md).

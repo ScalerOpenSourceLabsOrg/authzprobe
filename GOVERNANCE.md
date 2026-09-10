@@ -1,6 +1,6 @@
 # Governance
 
-AuthzProbe is a community open-source project stewarded by **<CLUB_NAME>**. This
+AuthzProbe is a community open-source project stewarded by **Scaler Open Source Labs**. This
 document describes how decisions are made and how the project is owned — so it
 keeps running smoothly as students join, lead, and graduate.
 
