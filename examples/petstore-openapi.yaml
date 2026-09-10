@@ -1,0 +1,65 @@
+openapi: 3.0.3
+info:
+  title: Demo Orders API
+  version: 1.0.0
+  description: >
+    A tiny API used to demonstrate AuthzProbe. The accompanying mock server
+    (examples/mock-server.mjs) implements these operations with DELIBERATE
+    authorization bugs so a scan produces real findings.
+servers:
+  - url: http://localhost:4010
+# Global security: every operation requires a bearer token unless it overrides.
+security:
+  - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+paths:
+  /users/{userId}:
+    get:
+      operationId: getUser
+      summary: Get a user profile
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: The user profile
+        '403':
+          description: Forbidden
+
+  /users/{userId}/orders/{orderId}:
+    get:
+      operationId: getOrder
+      summary: Get a single order belonging to a user
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: The order
+        '403':
+          description: Forbidden
+
+  /admin/stats:
+    get:
+      operationId: getAdminStats
+      summary: Admin-only platform statistics
+      responses:
+        '200':
+          description: Stats
+        '403':
+          description: Forbidden

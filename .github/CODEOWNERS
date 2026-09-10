@@ -1,0 +1,15 @@
+# Code owners are automatically requested for review on matching PRs.
+# See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Replace <NEW_MAINTAINER> with the real GitHub handle (no angle brackets).
+
+# Default owner for everything in the repo.
+*                       @<NEW_MAINTAINER>
+
+# The engine is the security-critical core — always review carefully.
+/src/engine/            @<NEW_MAINTAINER>
+
+# Project governance & security policy changes.
+/GOVERNANCE.md          @<NEW_MAINTAINER>
+/SECURITY.md            @<NEW_MAINTAINER>
+/MAINTAINERS.md         @<NEW_MAINTAINER>

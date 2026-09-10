@@ -1,0 +1,38 @@
+# Identity / resource mapping config for the demo API.
+#
+# This file is the human-authored source of truth for "who legitimately owns
+# what". AuthzProbe only tests the ownership declared here — it never guesses.
+#
+# Tokens reference environment variables so secrets stay OUT of the file.
+# For the demo, the mock server accepts these literal tokens; the demo script
+# sets the env vars for you.
+
+baseUrl: http://localhost:4010
+
+identities:
+  - name: alice
+    auth:
+      type: bearer
+      token: ${ALICE_TOKEN}
+    owns:
+      # Parameter name (as it appears in the spec) -> values Alice owns.
+      userId: ["alice-123"]
+      orderId: ["order-a1"]
+
+  - name: bob
+    auth:
+      type: bearer
+      token: ${BOB_TOKEN}
+    owns:
+      userId: ["bob-456"]
+      orderId: ["order-b1"]
+
+# BFLA rules: operations only the listed identities may invoke.
+# Nobody in this config is an admin, so both alice and bob attempting
+# GET /admin/stats should be denied by a correctly-secured server.
+privileged:
+  - operation: "GET /admin/stats"
+    allow: ["admin"]
+
+# HTTP statuses that count as a correct denial.
+denyStatuses: [401, 403, 404]

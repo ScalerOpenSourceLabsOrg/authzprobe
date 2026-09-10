@@ -1,0 +1,52 @@
+{
+  "name": "authzprobe",
+  "version": "0.1.0",
+  "description": "Spec-driven API authorization tester — replays requests cross-identity to catch BOLA & BFLA (OWASP API Security Top 10).",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "authzprobe": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "mock": "node examples/mock-server.mjs",
+    "demo": "tsx scripts/demo.mjs"
+  },
+  "keywords": [
+    "openapi",
+    "swagger",
+    "security",
+    "bola",
+    "bfla",
+    "authorization",
+    "owasp",
+    "api-security",
+    "idor",
+    "cli"
+  ],
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^10.1.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0",
+    "picocolors": "^1.1.1",
+    "yaml": "^2.6.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  }
+}
