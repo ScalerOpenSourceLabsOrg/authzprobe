@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: 💬 Questions & ideas
-    url: https://github.com/<ORG>/authzprobe/discussions
+    url: https://github.com/ScalerOpenSourceLabsOrg/authzprobe/discussions
     about: Ask questions, share ideas, or discuss usage in GitHub Discussions.
   - name: 🔒 Report a security vulnerability
-    url: https://github.com/<ORG>/authzprobe/security/advisories/new
+    url: https://github.com/ScalerOpenSourceLabsOrg/authzprobe/security/advisories/new
     about: Please report vulnerabilities privately — do NOT open a public issue.

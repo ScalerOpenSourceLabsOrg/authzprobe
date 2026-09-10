@@ -31,7 +31,7 @@ priorities shift. Dates are targets, not promises.
 
 - SARIF + JUnit reporters, HTML report ([Idea #3](./GSOC_IDEAS.md))
 - Baseline/diff mode (fail only on *new* findings)
-- Published `<ORG>/authzprobe-action`
+- Published `ScalerOpenSourceLabsOrg/authzprobe-action`
 
 ## 🔭 Beyond — Autonomy
 
@@ -41,6 +41,6 @@ priorities shift. Dates are targets, not promises.
 
 ## How to influence the roadmap
 
-Open a [Discussion](https://github.com/<ORG>/authzprobe/discussions) or comment
+Open a [Discussion](https://github.com/ScalerOpenSourceLabsOrg/authzprobe/discussions) or comment
 on a tracking issue. Significant changes follow the process in
 [`GOVERNANCE.md`](../GOVERNANCE.md).

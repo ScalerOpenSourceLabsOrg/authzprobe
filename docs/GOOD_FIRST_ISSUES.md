@@ -43,5 +43,5 @@ For larger, project-sized work (GSoC / semester projects), see
     `--include-unsafe`), capture the returned id, then read it as identity B — no
     pre-declared ownership required.
 12. **HTML report** with per-finding remediation guidance and OWASP references.
-13. **GitHub Action wrapper** so `uses: <ORG>/authzprobe-action@v1` runs a scan
+13. **GitHub Action wrapper** so `uses: ScalerOpenSourceLabsOrg/authzprobe-action@v1` runs a scan
     in any repo's CI.

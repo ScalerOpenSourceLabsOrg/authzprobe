@@ -5,7 +5,7 @@ capstones, or anyone who wants to own a meaningful chunk of AuthzProbe. For
 small first tasks, see [`GOOD_FIRST_ISSUES.md`](./GOOD_FIRST_ISSUES.md).
 
 **How to apply / propose:** open a
-[Discussion](https://github.com/<ORG>/authzprobe/discussions) describing your
+[Discussion](https://github.com/ScalerOpenSourceLabsOrg/authzprobe/discussions) describing your
 approach and timeline, and tag a mentor. Read
 [`ARCHITECTURE.md`](./ARCHITECTURE.md) first. For GSoC, follow the program's
 official proposal process — this list is our ideas page.
@@ -47,7 +47,7 @@ official proposal process — this list is our ideas page.
 - **Deliverables:**
   - Pluggable reporters: JUnit XML, SARIF (so findings show in GitHub code
     scanning), and a self-contained HTML report with remediation guidance.
-  - A published `<ORG>/authzprobe-action` so any repo can add a scan step.
+  - A published `ScalerOpenSourceLabsOrg/authzprobe-action` so any repo can add a scan step.
   - Baseline/diff mode: fail CI only on *new* findings vs. a saved baseline.
 - **Outcome:** AuthzProbe becomes a first-class CI security gate.
 

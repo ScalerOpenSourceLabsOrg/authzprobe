@@ -23,9 +23,9 @@ By participating you agree to abide by our [Code of Conduct](./CODE_OF_CONDUCT.m
   [GSoC-style idea](./docs/GSOC_IDEAS.md).
 - **Docs** — clarify anything that confused you while onboarding. Doc PRs are
   first-class contributions.
-- **Bugs** — file a clear, reproducible [bug report](https://github.com/<ORG>/authzprobe/issues/new/choose).
+- **Bugs** — file a clear, reproducible [bug report](https://github.com/ScalerOpenSourceLabsOrg/authzprobe/issues/new/choose).
 - **Ideas** — start a thread in
-  [GitHub Discussions](https://github.com/<ORG>/authzprobe/discussions).
+  [GitHub Discussions](https://github.com/ScalerOpenSourceLabsOrg/authzprobe/discussions).
 
 ## Development setup
 
@@ -33,7 +33,7 @@ By participating you agree to abide by our [Code of Conduct](./CODE_OF_CONDUCT.m
 [`.nvmrc`](./.nvmrc)) and npm. If you use `nvm`: `nvm use`.
 
 ```bash
-git clone https://github.com/<ORG>/authzprobe.git
+git clone https://github.com/ScalerOpenSourceLabsOrg/authzprobe.git
 cd authzprobe
 npm install
 
@@ -115,8 +115,8 @@ Then open a PR against `main` and fill in the template. A good PR:
 
 ## Where to ask questions
 
-- **How do I…?** → [GitHub Discussions](https://github.com/<ORG>/authzprobe/discussions)
-- **I found a bug** → [open an issue](https://github.com/<ORG>/authzprobe/issues/new/choose)
+- **How do I…?** → [GitHub Discussions](https://github.com/ScalerOpenSourceLabsOrg/authzprobe/discussions)
+- **I found a bug** → [open an issue](https://github.com/ScalerOpenSourceLabsOrg/authzprobe/issues/new/choose)
 - **I found a security vulnerability** → **do not open a public issue**; follow
   [`SECURITY.md`](./SECURITY.md).
 

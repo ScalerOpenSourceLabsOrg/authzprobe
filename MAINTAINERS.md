@@ -32,5 +32,5 @@ Past maintainers who have stepped back. Thank you for your work! 🙏
 ---
 
 **Contacting maintainers:** open an issue or a
-[Discussion](https://github.com/<ORG>/authzprobe/discussions). For security
+[Discussion](https://github.com/ScalerOpenSourceLabsOrg/authzprobe/discussions). For security
 issues, follow [`SECURITY.md`](./SECURITY.md) — do not post publicly.

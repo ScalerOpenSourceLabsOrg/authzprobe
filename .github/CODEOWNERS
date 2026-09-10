@@ -1,15 +1,16 @@
 # Code owners are automatically requested for review on matching PRs.
 # See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 #
-# Replace <NEW_MAINTAINER> with the real GitHub handle (no angle brackets).
+# In this club's model, every core member can review/merge any repo, so the
+# whole `core` team is the code owner. (A team owner must have write access to
+# the repo and the team must be visible to the repo.)
 
-# Default owner for everything in the repo.
-*                       @<NEW_MAINTAINER>
+# Default owner for everything in the repo: the core team.
+*                       @ScalerOpenSourceLabsOrg/core
 
-# The engine is the security-critical core — always review carefully.
-/src/engine/            @<NEW_MAINTAINER>
-
-# Project governance & security policy changes.
-/GOVERNANCE.md          @<NEW_MAINTAINER>
-/SECURITY.md            @<NEW_MAINTAINER>
-/MAINTAINERS.md         @<NEW_MAINTAINER>
+# Security-critical or governance files — still owned by core, called out so
+# reviewers know to look carefully.
+/src/engine/            @ScalerOpenSourceLabsOrg/core
+/GOVERNANCE.md          @ScalerOpenSourceLabsOrg/core
+/SECURITY.md            @ScalerOpenSourceLabsOrg/core
+/MAINTAINERS.md         @ScalerOpenSourceLabsOrg/core

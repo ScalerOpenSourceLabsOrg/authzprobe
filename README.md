@@ -1,6 +1,6 @@
 # AuthzProbe
 
-[![CI](https://github.com/<ORG>/authzprobe/actions/workflows/ci.yml/badge.svg)](https://github.com/<ORG>/authzprobe/actions/workflows/ci.yml)
+[![CI](https://github.com/ScalerOpenSourceLabsOrg/authzprobe/actions/workflows/ci.yml/badge.svg)](https://github.com/ScalerOpenSourceLabsOrg/authzprobe/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Node >= 18](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](./.nvmrc)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)

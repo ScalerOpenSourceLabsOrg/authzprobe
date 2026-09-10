@@ -31,7 +31,7 @@ If `npm run demo` prints `4 FAIL · 0 WARN · 6 PASS`, you have a healthy checko
 
 ## 3. Access checklist (what to get from the outgoing maintainer)
 
-- [ ] Added as an **Owner** (or repo **Admin**) of the `<ORG>` GitHub org.
+- [ ] Added as an **Owner** (or repo **Admin**) of the `ScalerOpenSourceLabsOrg` GitHub org.
 - [ ] Added to the `maintainers` team.
 - [ ] Listed in [`MAINTAINERS.md`](../MAINTAINERS.md) and
       [`.github/CODEOWNERS`](../.github/CODEOWNERS).
@@ -39,7 +39,7 @@ If `npm run demo` prints `4 FAIL · 0 WARN · 6 PASS`, you have a healthy checko
       with the club (this account stays the **permanent Org Owner** — see
       [`GOVERNANCE.md`](../GOVERNANCE.md)).
 - [ ] Access to the npm package (if/when published) and any CI secrets.
-- [ ] Admin on [GitHub Discussions](https://github.com/<ORG>/authzprobe/discussions).
+- [ ] Admin on [GitHub Discussions](https://github.com/ScalerOpenSourceLabsOrg/authzprobe/discussions).
 
 ## 4. Your recurring responsibilities
 

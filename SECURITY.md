@@ -21,7 +21,7 @@ discussions, or pull requests.**
 Instead, use one of these private channels:
 
 1. **GitHub Private Vulnerability Reporting** (preferred) — go to the
-   [Security tab](https://github.com/<ORG>/authzprobe/security/advisories/new)
+   [Security tab](https://github.com/ScalerOpenSourceLabsOrg/authzprobe/security/advisories/new)
    and open a draft advisory.
 2. **Email** — send details to **<CLUB_EMAIL>** with the subject
    `[SECURITY] AuthzProbe`.

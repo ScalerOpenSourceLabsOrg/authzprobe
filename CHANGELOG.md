@@ -27,5 +27,5 @@ _Nothing yet — add entries here as you merge PRs._
 - Bundled deliberately-vulnerable mock server and a one-command `npm run demo`.
 - 23 unit tests, TypeScript strict mode, and a multi-stage Dockerfile.
 
-[Unreleased]: https://github.com/<ORG>/authzprobe/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/<ORG>/authzprobe/releases/tag/v0.1.0
+[Unreleased]: https://github.com/ScalerOpenSourceLabsOrg/authzprobe/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/ScalerOpenSourceLabsOrg/authzprobe/releases/tag/v0.1.0
