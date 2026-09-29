@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { planTests, signature } from '../src/engine/plan.js';
+import { planTests, parseOnlyFilter, signature } from '../src/engine/plan.js';
 import type { SpecOperation } from '../src/types.js';
 import type { Config } from '../src/config/schema.js';
 
@@ -83,6 +83,43 @@ describe('planTests — safety', () => {
     const unsafe = planTests([deleteUser], config, { includeUnsafe: true, includeBaseline: false });
     expect(unsafe.length).toBeGreaterThan(0);
   });
+});
+
+describe('planTests — only filter', () => {
+  it('restricts the plan to a single test family', () => {
+    // getUser yields BASELINE + BOLA, adminStats yields BFLA.
+    const ops = [getUser, adminStats];
+    const all = planTests(ops, config);
+    expect(new Set(all.map((c) => c.kind))).toEqual(new Set(['BOLA', 'BFLA', 'BASELINE']));
+
+    const bola = planTests(ops, config, { only: 'BOLA' });
+    expect(bola.length).toBeGreaterThan(0);
+    expect(bola.every((c) => c.kind === 'BOLA')).toBe(true);
+
+    const bfla = planTests(ops, config, { only: 'BFLA' });
+    expect(bfla.length).toBeGreaterThan(0);
+    expect(bfla.every((c) => c.kind === 'BFLA')).toBe(true);
+
+    const baseline = planTests(ops, config, { only: 'BASELINE' });
+    expect(baseline.length).toBeGreaterThan(0);
+    expect(baseline.every((c) => c.kind === 'BASELINE')).toBe(true);
+  });
+});
+
+describe('parseOnlyFilter', () => {
+  it('accepts undefined and any casing of the three kinds', () => {
+    expect(parseOnlyFilter(undefined)).toBeUndefined();
+    expect(parseOnlyFilter('bola')).toBe('BOLA');
+    expect(parseOnlyFilter('BFLA')).toBe('BFLA');
+    expect(parseOnlyFilter('Baseline')).toBe('BASELINE');
+  });
+
+  it.each(['sql', 'constructor', '__proto__', 'CONSTRUCTOR'])(
+    'rejects unknown value %s with an error listing the allowed kinds',
+    (value) => {
+      expect(() => parseOnlyFilter(value)).toThrow(/Allowed values: bola, bfla, baseline/);
+    },
+  );
 });
 
 describe('signature', () => {

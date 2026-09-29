@@ -39,6 +39,7 @@ export async function scan(options: ScanOptions): Promise<ScanReport> {
   const cases = planTests(operations, config, {
     includeUnsafe: options.includeUnsafe,
     includeBaseline: options.includeBaseline,
+    only: options.only,
   });
 
   const results = await replayAll(cases, config, {
