@@ -23,7 +23,8 @@ const ONLY_FILTERS: Record<string, TestKind> = {
  */
 export function parseOnlyFilter(value: string | undefined): TestKind | undefined {
   if (value === undefined) return undefined;
-  const kind = ONLY_FILTERS[value.toLowerCase()];
+  const key = value.toLowerCase();
+  const kind = Object.hasOwn(ONLY_FILTERS, key) ? ONLY_FILTERS[key] : undefined;
   if (!kind) {
     throw new Error(
       `Invalid value for --only: "${value}". Allowed values: bola, bfla, baseline.`,

@@ -114,9 +114,12 @@ describe('parseOnlyFilter', () => {
     expect(parseOnlyFilter('Baseline')).toBe('BASELINE');
   });
 
-  it('rejects unknown values with an error listing the allowed kinds', () => {
-    expect(() => parseOnlyFilter('sql')).toThrow(/Allowed values: bola, bfla, baseline/);
-  });
+  it.each(['sql', 'constructor', '__proto__', 'CONSTRUCTOR'])(
+    'rejects unknown value %s with an error listing the allowed kinds',
+    (value) => {
+      expect(() => parseOnlyFilter(value)).toThrow(/Allowed values: bola, bfla, baseline/);
+    },
+  );
 });
 
 describe('signature', () => {
